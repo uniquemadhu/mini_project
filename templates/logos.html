@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #060607; /* Set the background color for the body */
+        }
+        .container {
+            background-color: #403d3d; /* Set the background color for the container */
+            padding: 20px;
+            margin-top: 50px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2); /* Add a box shadow for the container */
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #f0eded; /* Set the color for the heading */
+            font-family: 'Arial Black', sans-serif; /* Set a unique font family */
+            font-weight: bold; /* Make the font bold */
+            font-size: 36px; /* Set the font size */
+            text-transform: uppercase; /* Transform the text to uppercase */
+            letter-spacing: 2px; /* Add spacing between letters */
+        }
+        .card-text {
+            text-align: center;
+            font-family: 'Arial', sans-serif;
+            font-size: 20px;
+            color: #666;
+            margin-top: 15px;
+        }
+        .real-logo {
+            background-color: #28a745; /* Green background color */
+            color: #fff; /* White text color */
+            padding: 5px 10px; /* Add padding for better appearance */
+            border-radius: 5px; /* Add rounded corners */
+        }
+        .fake-logo {
+            background-color: #dc3545; /* Red background color */
+            color: #fff; /* White text color */
+            padding: 5px 10px; /* Add padding for better appearance */
+            border-radius: 5px; /* Add rounded corners */
+        }
+        .card-img-top {
+            max-width: 300px; /* Adjust the maximum width of the image */
+            max-height: 300px; /* Adjust the maximum height of the image */
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Result</h1>
+        <div class="row">
+            <div class="col">
+                <div class="card">
+                    <div class="card-body">
+                        <img class="card-img-top" src="{{ url_for('static', filename=real_logo_path) }}" alt="Real Logo" width="300" height="200">
+                        <p class="card-text real-logo">Real Logo</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <div class="card-body">
+                        <img class="card-img-top" src="{{ url_for('static', filename=fake_logo_path) }}" alt="Fake Logo" width="300" height="200">
+                        <p class="card-text fake-logo">Fake Logo</p> <!-- Added "fake-logo" class -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
